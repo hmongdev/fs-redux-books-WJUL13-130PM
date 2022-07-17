@@ -1,7 +1,7 @@
 import BookList from '../BookList/BookList';
 import BookForm from '../BookForm/BookForm';
 import './App.css';
-//1. import
+//1. import axios and useDispatch
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
 //5a. useEffect
@@ -28,13 +28,13 @@ function App() {
         fetchBookList();
     }, []);
 
-    //7. pass fetchBookList as prop to BookForm
     return (
         <div className="App">
             <header>
                 <h1>Books w/ Redux!</h1>
             </header>
             <main>
+                {/* 7. pass fetchBookList as prop to BookForm */}
                 <BookForm fetchBookList={fetchBookList} />
                 <BookList />
             </main>

@@ -36,14 +36,13 @@ function BookForm({ fetchBookList }) {
                     value={title}
                     onChange={(event) => setTitle(event.target.value)}
                 />
-
+                o
                 <input
                     required
                     placeholder="Author"
                     value={author}
                     onChange={(event) => setAuthor(event.target.value)}
                 />
-
                 <button type="submit">Add Book</button>
             </form>
         </section>
